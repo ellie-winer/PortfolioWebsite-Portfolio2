@@ -36,17 +36,17 @@ def about():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
-        name = request.form.get('name')
-        email = request.form.get('email')
+        sender_name = request.form.get('name')
+        sender_email = request.form.get('email')
         message_content = request.form.get('message')
 
-        # Create an email message
-        msg = Message('New Contact Form Submission',
-                      recipients=['your-email@example.com'])  # Your email address
-        msg.body = f"Name: {name}\nEmail: {email}\nMessage: {message_content}"
+        msg = Message(subject='New Contact Form Submission',
+                      sender = (sender_name, sender_email),
+                      recipients=[os.getenv('EMAIL_USER')])
+        msg.body = f"Name: {sender_name}\nEmail: {sender_email}\nMessage: {message_content}"
 
         try:
-            mail.send(msg)  # Send the email
+            mail.send(msg)
             flash('Message sent successfully!', 'success')
         except Exception as e:
             print(f"Failed to send email: {e}")
