@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+<body class="index-page">
+<div class="text-center">
+    <h1 class="main-title">Python Project Portfolio</h1>
+    <p class="subtitle">Showcasing my projects and skills in the python programming language.</p>
+    <img src="{{ url_for('static', filename='/assets/cover_photo.jpeg') }}" alt="Profile Picture" class="rounded-circle" width="200">
+</div>
+
+<hr>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3 class="main-title">Morse Code Converter</h3>
+            <p class="subtitle">Takes a text input including numbers, symbols, and spaces allowing for multiple words. The output is your text converted into morse code.</p>
+            <img src="{{ url_for('static', filename='/assets/project1.jpeg') }}" class="img-fluid">
+            <a class="project-link">GitHub Link</a>
+        </div>
+        <div class="col-md-6">
+            <h3 class="main-title">Portfolio Website</h3>
+            <p class="subtitle">This website to display my personal projects. Each project is shown with a description, image, and a link to the code on my GitHub.</p>
+            <img src="{{ url_for('static', filename='/assets/project1.jpeg') }}" class="img-fluid">
+            <a class="project-link">GitHub Link</a>
+        </div>
+        <div class="col-md-6">
+            <h3 class="main-title">Tic Tac Toe</h3>
+            <p class="subtitle">You can play against another person or the computer. Players alternate choosing which position on the grid to place their X or O until all places are filled and final results are announced. The updated grid is printed after each turn. </p>
+            <img src="{{ url_for('static', filename='/assets/project3.jpeg') }}" class="img-fluid">
+            <a class="project-link">GitHub Link</a>
+        </div>
+        <div class="col-md-6">
+            <h3 class="main-title">Watermark Application</h3>
+            <p class="subtitle">Adds the shown watermark image and takes an input as watermark text to any image you want. All you need to do is add your image to the application and input the filename.</p>
+            <img src="{{ url_for('static', filename='/assets/project4.jpeg') }}" class="img-fluid">
+            <a class="project-link">GitHub Link</a>
+        </div>
+        <div class="col-md-6">
+            <h3 class="main-title">Typing Speed Test</h3>
+            <p class="subtitle">After pressing the start button sentences will continually form until 60 seconds has passed. The user can type the sentences as quickly as they can into the text box and after the timer is finished the amount of correct words typed is displayed. </p>
+            <img src="{{ url_for('static', filename='/assets/project5.jpeg') }}" class="img-fluid">
+            <a class="project-link">GitHub Link</a>
+        </div>
+        <div class="col-md-6">
+            <h3 class="main-title">Disappearing Text Application</h3>
+            <p class="subtitle">A tool commonly used for writers block, type whatever you want into the text box. However, you must keep typing because after 10 seconds of no keys being pressed all that was written is deleted. </p>
+            <img src="{{ url_for('static', filename='/assets/project9.jpeg') }}" class="img-fluid">
+            <a class="project-link">GitHub Link</a>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}
+
+  
+
+
+
