@@ -2,9 +2,7 @@
 
 {% block title %}Contact{% endblock %}
 
-
 {% block content %}
-<body class="contact-page">
 <h2>Contact Me</h2>
 <form method="POST" action="{{ url_for('contact') }}">
   <div class="mb-3">
@@ -21,7 +19,6 @@
   </div>
   <button type="submit" class="btn btn-primary">Send</button>
 </form>
-</body>
 {% endblock %}
 
 
