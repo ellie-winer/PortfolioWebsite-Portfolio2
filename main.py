@@ -54,7 +54,7 @@ def contact():
             print(f"Failed to send email: {e}")
             flash('Failed to send message. Please try again later.', 'danger')
 
-        return redirect(url_for('home'))
+        return redirect(url_for('contact'))
 
     return render_template('contact.html')
 
