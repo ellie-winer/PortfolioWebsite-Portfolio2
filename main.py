@@ -6,6 +6,10 @@ from flask_ckeditor import CKEditor
 import smtplib
 from dotenv import load_dotenv
 import os
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 app = Flask(__name__)
@@ -51,7 +55,7 @@ def contact():
             mail.send(msg)
             flash('Message sent successfully!', 'success')
         except Exception as e:
-            print(f"Failed to send email: {e}")
+            logger.exception(f"Failed to send email: {e}")
             flash('Failed to send message. Please try again later.', 'danger')
 
         return redirect(url_for('contact'))
